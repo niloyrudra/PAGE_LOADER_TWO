@@ -25,10 +25,42 @@ body {
 }
 
 .wrapper {
+    position: relative;
     max-width: 60%;
     min-width: 61.25rem;
     margin: 2rem auto 0;
     opacity: 0;
+}
+
+
+.layers,
+.overlap-layer,
+.overlap-layer-two,
+.overlap-layer-three {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.overlap-layer,
+.overlap-layer-two,
+.overlap-layer-three {
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+.overlap-layer{
+    background-color: #f00;
+    z-index: 3;
+}
+.overlap-layer-two {
+    z-index: 2;
+    background-color: #961919;
+}
+.overlap-layer-three {
+    z-index: 1;
+    background-color: #531111;
 }
 
 img{
